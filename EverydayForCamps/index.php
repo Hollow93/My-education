@@ -45,6 +45,11 @@ if (isset($_GET['delete'])) {
     $state = $pdo->prepare($sql2);
     $state->execute(array($_GET['id']));
 }
+if (isset($_GET['complete'])) {
+    $sql2 = "UPDATE tasks SET is_done = 'Выполнено' WHERE id = ?";
+    $state = $pdo->prepare($sql2);
+    $state->execute(array($_GET['id']));
+}
 
 if (isset($_POST['top2'])) {
     switch ($_POST['top2']) {
@@ -65,7 +70,8 @@ if (isset($_POST['top2'])) {
     $state = $pdo->prepare($sql);
     $state->execute();
 }
-
+$x= 'disabled1disabled';
+echo '<input type="text" name="list" value='.$x.'>';
 
 ?>
 <table align="left" width="600" border="1">
