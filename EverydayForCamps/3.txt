@@ -1,0 +1,95 @@
+
+<style>
+    table { 
+        border-spacing: 0;
+        border-collapse: collapse;
+    }
+
+    table td, table th {
+        border: 1px solid #ccc;
+        padding: 5px;
+    }
+    
+    table th {
+        background: #eee;
+    }
+</style>
+
+<h1>Список дел на сегодня</h1>
+<div style="float: left">
+    <form method="POST">
+        <input type="text" name="description" placeholder="Описание задачи" value="" />
+        <input type="submit" name="save" value="Добавить" />
+    </form>
+</div>
+<div style="float: left; margin-left: 20px;">
+    <form method="POST">
+        <label for="sort">Сортировать по:</label>
+        <select name="sort_by">
+            <option value="date_created">Дате добавления</option>
+            <option value="is_done">Статусу</option>
+            <option value="description">Описанию</option>
+        </select>
+        <input type="submit" name="sort" value="Отсортировать" />
+    </form>
+</div>
+<div style="clear: both"></div>
+
+<table>
+    <tr>
+        <th>Описание задачи</th>
+        <th>Дата добавления</th>
+        <th>Статус</th>
+        <th></th>
+    </tr>
+<tr>
+  <td>bbbbb</td>
+  <td>2017-10-05 05:25:28</td>
+  <td><span style='color: green;'>Выполнено</span></td>
+  <td>
+        <a href='?id=432&action=edit'>Изменить</a>
+        <a href='?id=432&action=done'>Выполнить</a>
+        <a href='?id=432&action=delete'>Удалить</a>
+    </td>
+</tr>
+<tr>
+  <td>67</td>
+  <td>2017-10-13 15:43:11</td>
+  <td><span style='color: green;'>Выполнено</span></td>
+  <td>
+        <a href='?id=435&action=edit'>Изменить</a>
+        <a href='?id=435&action=done'>Выполнить</a>
+        <a href='?id=435&action=delete'>Удалить</a>
+    </td>
+</tr>
+<tr>
+  <td>fvcxv</td>
+  <td>2017-10-13 21:24:37</td>
+  <td><span style='color: orange;'>В процессе</span></td>
+  <td>
+        <a href='?id=436&action=edit'>Изменить</a>
+        <a href='?id=436&action=done'>Выполнить</a>
+        <a href='?id=436&action=delete'>Удалить</a>
+    </td>
+</tr>
+<tr>
+  <td>фс</td>
+  <td>2017-10-13 21:24:39</td>
+  <td><span style='color: green;'>Выполнено</span></td>
+  <td>
+        <a href='?id=437&action=edit'>Изменить</a>
+        <a href='?id=437&action=done'>Выполнить</a>
+        <a href='?id=437&action=delete'>Удалить</a>
+    </td>
+</tr>
+<tr>
+  <td>af</td>
+  <td>2017-10-24 10:30:21</td>
+  <td><span style='color: orange;'>В процессе</span></td>
+  <td>
+        <a href='?id=438&action=edit'>Изменить</a>
+        <a href='?id=438&action=done'>Выполнить</a>
+        <a href='?id=438&action=delete'>Удалить</a>
+    </td>
+</tr>
+</table>
