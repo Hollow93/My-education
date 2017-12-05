@@ -1,5 +1,1 @@
-﻿1. боулинг
-2. top2 in sort
-3. BD + git
-
-4. list input text - в инпут и обратно
+﻿1.завершение update
